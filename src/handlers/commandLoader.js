@@ -288,17 +288,14 @@ const registeredNames = new Set();
                 throw error;
             }
         } else {
-    logger.info(`Registering ${commands.length} global commands...`);
+            logger.info(`Registering ${commands.length} global commands...`);
 
-    await client.rest.put(
-        Routes.applicationCommands(client.user.id),
-        { body: commands }
-    );
+            await client.rest.put(
+                Routes.applicationCommands(client.user.id),
+                { body: commands }
+            );
 
-    logger.info(`Successfully registered ${commands.length} global commands`);
-        }
-
-    logger.info(`Successfully registered ${commands.length} global commands`);
+            logger.info(`Successfully registered ${commands.length} global commands`);
         }
     } catch (error) {
         logger.error('Error registering commands:', error);
