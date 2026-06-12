@@ -297,6 +297,9 @@ const registeredNames = new Set();
 
     logger.info(`Successfully registered ${commands.length} global commands`);
         }
+
+    logger.info(`Successfully registered ${commands.length} global commands`);
+        }
     } catch (error) {
         logger.error('Error registering commands:', error);
         throw error;
