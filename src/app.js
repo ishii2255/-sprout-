@@ -300,11 +300,11 @@ class TitanBot extends Client {
   }
 
   async registerCommands() {
-    
-      await registerSlashCommands(this);
-    } catch (error) {
-      logger.error('Error registering commands:', error);
-    }
+  try {
+    await registerSlashCommands(this);
+  } catch (error) {
+    logger.error('Error registering commands:', error);
+  }
   }
 
   async shutdown(reason = 'UNKNOWN') {
